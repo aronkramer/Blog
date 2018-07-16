@@ -1,0 +1,6 @@
+c:\Users\aron\source\repos\RedoBlog\RedoBlog.Data\bin\Debug\RedoBlog.Data.dll
+c:\Users\aron\source\repos\RedoBlog\RedoBlog.Data\bin\Debug\RedoBlog.Data.pdb
+c:\Users\aron\source\repos\RedoBlog\RedoBlog.Data\obj\Debug\RedoBlog.Data.csprojResolveAssemblyReference.cache
+c:\Users\aron\source\repos\RedoBlog\RedoBlog.Data\obj\Debug\RedoBlog.Data.csproj.CoreCompileInputs.cache
+c:\Users\aron\source\repos\RedoBlog\RedoBlog.Data\obj\Debug\RedoBlog.Data.dll
+c:\Users\aron\source\repos\RedoBlog\RedoBlog.Data\obj\Debug\RedoBlog.Data.pdb

@@ -1,0 +1,42 @@
+﻿@using RedoBlog.Data
+@using RedoBlog.Models
+@model BlogAndComments
+
+<div class="row">
+    <div class="col-md-6">
+        <p><span class="glyphicon glyphicon-time"></span> Posted on @Model.Blog.DateSubmitted.ToLongDateString()</p>
+        
+        <hr>
+        <p class="lead">@Model.Blog.Title</p>
+        @foreach(string para in Model.Blog.Text.Split(new string[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries))
+        {
+            <p>@para</p>
+        }
+        <hr>
+        <form method="post" action="/home/addComments">
+            <div class="well">
+                <input class="form-control" placeholder="Name" id="commenters-name" name="cname" value="@Model.CookieName"/>
+                <br />
+                <h4>Leave a Comment:</h4>
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" name="ccomment"></textarea>
+                </div>
+                <input type="hidden" name="cblogid" value="@Model.Blog.Id" />
+                <button disabled class="btn btn-primary" id="CommentButton">Submit</button>
+            </div>
+        </form>
+        <div>
+            @foreach (Comments c in Model.comments)
+            {
+                <h4>@c.cName</h4>
+                <h3>@c.ccomment</h3>
+                <hr />
+            }
+           
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/ButtonEnable.js"></script>
+    }

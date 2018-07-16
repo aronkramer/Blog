@@ -1,0 +1,29 @@
+﻿@using RedoBlog.Data
+@model IEnumerable<Blogs>
+
+<div class="row">
+    <div class="col-md-8">
+
+        @foreach (Blogs b in Model)
+        {
+            <h2>
+                <a href="/Home/Comment?id=@b.Id">@b.Title</a>
+            </h2>
+
+            <p><span class="glyphicon glyphicon-time"></span> Posted on, @b.DateSubmitted.ToLongDateString()</p>
+            <br />
+            <p>@(b.Text.Length < 200 ? b.Text : b.Text.Substring(0,200) + "...")</p>
+            <a class="btn btn-primary" href="/Home/Comment?id=@b.Id">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <hr>
+        }              
+        
+        <ul class="pager">
+            <li class="previous">
+                <a href="#">&larr; Older</a>
+            </li>
+            <li class="next">
+                <a href="#">Newer &rarr;</a>
+            </li>
+        </ul>
+    </div>
+</div>
